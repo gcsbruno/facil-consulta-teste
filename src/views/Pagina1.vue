@@ -56,31 +56,40 @@
             ></b-form-input>
           </b-form-group>
         </div>
-        <div class="col-xs-6">
-          <b-form-select
-            v-model="selected"
-            :options="optionsEstado"
-            class="mt-3"
-            @formchange="
-              {
-                optionsCidade;
-              }
-            "
-          ></b-form-select>
-          <b-form-select
-            v-model="selectedCidade"
-            :options="optionsCidade"
-            class="mt-3"
-          ></b-form-select>
-        </div>
-        <div class="col-xs-6">
+        <div class="div-locale">
+          <div class="div-estado">
+            <label class="label-form" for="estado">Estado</label>
+            <select v-model="selected" class="form-control" :state="stateEstado">
+              <option
+                v-for="option in options"
+                v-bind:value="option.value"
+                v-bind:key="option.text"
+              >
+                {{ option.text }}
+              </option>
+            </select>
+          </div>
+
+          <div class="div-cidade">
+            <label class="label-form" for="cidade">Cidade</label>
+            <select name="" id="" class="form-control" :state="stateCidade">
+              <option v-if="selected == 1" value="">Londrina</option>
+              <option v-if="selected == 1" value="">Maringá</option>
+
+              <option v-if="selected == 2" value="">Pelotas</option>
+              <option v-if="selected == 2" value="">Porto Alegre</option>
+
+              <option v-if="selected == 3" value="">Florianópolis</option>
+              <option v-if="selected == 3" value="">Joinville</option>
+            </select>
+          </div>
           <b-progress class="mt-2" :max="max">
             <b-progress-bar :value="50"></b-progress-bar>
           </b-progress>
-
-          <Botao class="mt-4" size="lg" itemid="nextButton">
-            <router-link to="/Pagina2">Próximo</router-link>
-          </Botao>
+          <br />
+          <router-link to="/Pagina2">
+            <Botao />
+          </router-link>
         </div>
       </b-col>
       <b-col cols="4">
@@ -100,7 +109,6 @@
 
 <script>
 import Botao from "../components/Botao.vue";
-
 export default {
   components: {
     Botao,
@@ -137,7 +145,6 @@ export default {
       }
     },
   },
-
   data() {
     return {
       errors: [],
@@ -145,15 +152,10 @@ export default {
       CPF: "",
       CEL: "",
       selected: null,
-      optionsEstado: [
-        { value: null, text: "Estado" },
-        { value: "a", text: "Santa Catarina" },
-        { value: "b", text: "Paraná" },
-        { value: "c", text: "Rio Grande do Sul" },
-      ],
-      optionsCidade: [
-        { value: null, text: "Cidade" },
-        { value: "a", text: "Joinville" },
+      options: [
+        { value: 1, text: "Paraná" },
+        { value: 2, text: "Rio Grande do Sul" },
+        { value: 3, text: "Santa Catarina" },
       ],
     };
   },
@@ -164,17 +166,14 @@ export default {
 .container {
   display: grid;
 }
-
 .nextButton {
   background-color: #483698;
 }
-
 .imagem {
   margin-top: 6vh;
   padding: 14px;
   width: max-content;
 }
-
 .title {
   font-family: "Comfortaa";
   src: local("Comfortaa"), url(../assets/fonts/Comfortaa-VariableFont_wght.ttf);

@@ -5,21 +5,26 @@
 </template>
 
 <script>
-
 export default {
   name: "App",
-  components: {
-  },
+  components: {},
 };
 </script>
 
 <style>
-.h1 {
-  font-family: "Comfortaa";
-  src: local("Comfortaa"), url(./assets/fonts/Comfortaa-VariableFont_wght.ttf);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+h1,
+h2,
+h3
+ {
+  font-family: "Comfortaa", cursive;
+  color: #483698;
 }
 
 #app {
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

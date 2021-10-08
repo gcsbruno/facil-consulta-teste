@@ -15,5 +15,10 @@ export default new Router ({
             name: "Página 2",
             component: () => import("./views/Pagina2")
         },
+        {
+            path: "/Pagina3",
+            name: "Pagina 3",
+            component: () => import("./views/Pagina3")
+        }
     ]
 })

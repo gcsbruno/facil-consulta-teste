@@ -1,11 +1,16 @@
 <template>
-  <button :style="{background, color}">
+  <button class="button">
       Próximo
   </button>
 </template>
 
 <script>
 export default {
+    data() {
+        return {
+            tituloBotao: ''
+        }
+    },
     props: {
         colors: {
             type: String
@@ -21,13 +26,18 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
     button {
+        font-family: 'Comfortaa', cursive;
         background-color: #483698;
         color: #fff;
         border: none;
         border-radius: 5px;
         padding: 10px;
         cursor: pointer;
+        width: 300px
     }
 
     button:hover {
