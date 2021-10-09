@@ -1,24 +1,25 @@
 # facil-consulta-teste
 
-## Project setup
+## Faça um clone do projeto e execute na pasta o comando:
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Inicie o projeto com: 
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### O que foi utilizado?
 ```
-yarn build
+- v-mask
+- bootstrap-vue
+- vue-router
 ```
-
-### Lints and fixes files
+### O que faltou?
 ```
-yarn lint
+- Responsividade com precisão
+- Armazenamento e validação do formulário
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Dificuldades
+- Armazenar os dados client-side com vue. Para mim o v-model serviria para isso, porém faltou alguma coisa... Irei pesquisar mais sobre e logo encontrarei uma solução.

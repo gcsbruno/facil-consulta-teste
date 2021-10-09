@@ -1,5 +1,5 @@
 <template>
-  <button class="button">
+  <button type="submit" class="button">
       Próximo
   </button>
 </template>

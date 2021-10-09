@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-bind:style="{backgroundColor: color}">
     <router-view />
   </div>
 </template>
@@ -21,6 +21,10 @@ h3
  {
   font-family: "Comfortaa", cursive;
   color: #483698;
+}
+
+body {
+  background-color: #FFe766;
 }
 
 #app {
