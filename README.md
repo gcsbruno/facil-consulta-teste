@@ -17,9 +17,9 @@ yarn serve
 - vue-router
 ```
 ### O que faltou?
-```
+
 - Responsividade com precisão
 - Armazenamento e validação do formulário
-```
+
 ## Dificuldades
 - Armazenar os dados client-side com vue. Para mim o v-model serviria para isso, porém faltou alguma coisa... Irei pesquisar mais sobre e logo encontrarei uma solução.
