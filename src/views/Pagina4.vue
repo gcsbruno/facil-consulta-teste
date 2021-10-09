@@ -12,7 +12,9 @@
     </b-col>
   </div>
   <b-col>
+      <router-link to="/">
     <button type="submit" class="button">Criar outro cadastro</button>
+      </router-link>
   </b-col>
   </div>
 </template>
